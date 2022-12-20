@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    font-size: medium;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fffce9;
+}
+
+/*Header - start*/
+
+header {
+    position: fixed;
+    width: 100%;
+    transition: all 80ms ease-out;
+    z-index: 1;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+header.active {
+    position: fixed;
+    width: 100%;
+    transition: all 80ms ease-out;
+    z-index: 1;
+    background: #fee8a9;
+    transition: all 0.5s ease;
+}
+
+header.scrolled {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+/*Nav-bar burger menu mobil - start*/
+
+.nav-bar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+}
+
+.nav-branding img {
+    width: 150px;
+}
+
+.nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 99px;
+    gap: 0;
+    flex-direction: column;
+    background: #fee8a9;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-link {
+    transition: 0.5s ease;
+}
+
+.nav-link:hover {
+    color: #1b5b00b0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #424541e0;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #424541e0;
+    border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+/*Nav-bar burger menu mobil - slut*/
+
+/*Header - slut*/
+
+/*Main mobil - start*/
+
+section.banner {
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+h1 {
+    color: #424541e0;
+    font-size: 10vw;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 150px;
+}
+
+h2 {
+    color: #424541e0;
+    font-size: 4.5vw;
+    text-align: center;
+    font-weight: 300;
+    margin: 25px 25px 50px 25px;
+}
+
+article img {
+    width: 100%;
+}
+
+article {
+    padding: 25px;
+}
+
+article h5 {
+    color: #424541e0;
+    font-size: 4.5vw;
+    text-align: center;
+    font-weight: 300;
+    padding: 25px 25px 25px 25px;
+}
+
+article.one {
+    background-color: #bec8d1;
+}
+
+article.two {
+    background-color: #ecd1a6;
+}
+
+article.four img {
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+article.four h5 {
+    padding: 50px 0 50px 0;
+}
+
+/*Main mobil - slut*/
+
+/*Footer mobil - start*/
+
+footer {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: #35711c;
+    z-index: -2;
+    gap: 25px;
+}
+
+h6 {
+    position: relative;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+footer p, footer h5 {
+    position: relative;
+    font-size: x-small;
+    text-align: center;
+    padding: 2px;
+}
+
+.footer-logo {
+    display: block;
+    margin: auto;
+    width: 150px;
+    padding: 5px;
+}
+
+/*Footer mobil - slut*/
+
+/*Tablet - start*/
+
+@media(min-width: 425px) {
+
+    h1 {
+        font-size: 5.5vw;
+    }
+
+    h2 {
+        font-size: 2.5vw;
+    }
+
+    article h5 {
+        font-size: 2.5vw;
+    }
+
+    footer p, footer h5 {
+        font-size: small;
+    }
+}
+
+/*Tablet - slut*/
+
+/*Desktop - start*/
+
+@media(min-width: 950px) {
+
+    /*Nav-bar desktop - start*/
+
+    .nav-bar {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        right: 0;
+        top: 0;
+        flex-direction: row;
+        text-align: center;
+        width: auto;
+        background: transparent;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /*Nav-bar desktop - slut*/
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 1.75vw;
+        margin: 25px 19% 50px 19%;
+    }
+
+    article img {
+        position: relative;
+        width: 40%;
+        left: 30%;
+    }
+
+    article h5 {
+        font-size: 1.75vw;
+        margin: 0 19% 0 19%;
+    }
+
+    article.four img {
+        position: relative;
+        width: 36%;
+        left: 32%;
+    }
+
+    /*Footer desktop - start*/
+
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer section {
+        margin: auto 0 auto 0;
+    }
+
+    /*Footer desktop - slut*/
+
+}
+
+/*Desktop - slut*/

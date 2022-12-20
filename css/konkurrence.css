@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    font-size: medium;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fffce9;
+}
+
+/*Header - start*/
+
+header {
+    position: fixed;
+    width: 100%;
+    transition: all 80ms ease-out;
+    z-index: 1;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+header.active {
+    position: fixed;
+    width: 100%;
+    transition: all 80ms ease-out;
+    z-index: 1;
+    background: #fee8a9;
+    transition: all 0.5s ease;
+}
+
+header.scrolled {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+/*Header - slut*/
+
+/*Nav-bar burger menu mobil - start*/
+
+.nav-bar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+}
+
+.nav-branding img {
+    width: 150px;
+}
+
+.nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 99px;
+    gap: 0;
+    flex-direction: column;
+    background: #fee8a9;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-link {
+    transition: 0.5s ease;
+}
+
+.nav-link:hover {
+    color: #1b5b00b0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #424541e0;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #424541e0;
+    border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+/*Nav-bar burger menu mobil - slut*/
+
+/*Banner mobil - start*/
+
+main {
+    margin-bottom: -5px;
+}
+
+img.mobile {
+    margin-bottom: -5px;
+}
+
+main img.mobile {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+main img.tablet {
+    display: none;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+main img.desktop {
+    display: none;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/*Banner mobil - slut*/
+
+/*Kampagne mobil - start*/
+
+main section {
+    color: #424541e0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: large;
+}
+
+h3, h4 {
+    font-size: small;
+}
+
+main section img {
+    margin: 25px 0 0 0;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    border: 1.3px solid #42454127;
+    border-radius: 5%;
+}
+
+/*Kampagne mobil - slut*/
+
+/*Footer mobil - start*/
+
+footer {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: #35711c;
+    z-index: -2;
+    gap: 25px;
+}
+
+h6 {
+    position: relative;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+footer p, h5 {
+    position: relative;
+    font-size: x-small;
+    text-align: center;
+    padding: 2px;
+}
+
+.footer-logo {
+    display: block;
+    margin: auto;
+    width: 150px;
+    padding: 5px;
+}
+
+/*Footer mobil - slut*/
+
+/*Tablet - start*/
+
+@media(min-width: 425px) {
+
+    /*Banner tablet - start*/
+
+    main img.mobile {
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    main img.tablet {
+        display: block;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    main img.desktop {
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    footer p, h5 {
+        font-size: small;
+    }
+
+    /*Banner tablet - slut*/
+
+    /*Kampagne tablet - start*/
+
+    h1 {
+        font-size: xxx-large;
+    }
+
+    h2 {
+        font-size: x-large;
+    }
+
+    h3, h4 {
+        font-size: medium;
+    }
+
+     main section img {
+        width: 40%;
+        left: 30%;
+    }
+
+    /*Kampagne tablet - slut*/
+}
+
+/*Tablet - slut*/
+
+/*Desktop - start*/
+
+@media(min-width: 950px) {
+
+    /*Nav-bar desktop - start*/
+
+    .nav-bar {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        right: 0;
+        top: 0;
+        flex-direction: row;
+        text-align: center;
+        width: auto;
+        background: transparent;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /*Nav-bar desktop - slut*/
+
+    /*Banner desktop - start*/
+
+    main img.mobile {
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    main img.tablet {
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    main img.desktop {
+        display: block;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    /*Banner desktop - slut*/
+
+    /*Kampagne desktop - start*/
+
+    h1 {
+        font-size: xxx-large;
+    }
+
+    h2 {
+        font-size: xx-large;
+    }
+
+    h3, h4 {
+        font-size: large;
+    }
+
+    main section img {
+        width: 30%;
+        left: 35%;
+    }
+
+    /*Kampagne desktop - slut*/
+
+    /*Footer desktop - start*/
+
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer section {
+        margin: auto 0 auto 0;
+    }
+
+    /*Footer desktop - slut*/
+
+}
+
+/*Desktop - slut*/

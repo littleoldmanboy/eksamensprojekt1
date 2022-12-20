@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /eksamensprojekt1 *
+
+Allow: /public_html
+
+Sitemap: https://eksamensprojekt1.dennisrussell.dk/sitemap.xml
